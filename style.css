@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "typewriter";
+    src: url("fonts/Norse-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+body {
+    margin: 0 auto;
+    max-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+img {
+    max-height: 100vh;
+    width: 450px;
+    display: block;
+    width: auto;
+}
+
+
+
+.container {
+    justify-content: center;
+    display: flex;
+    width: 1423.33px;
+    position: relative;
+
+}
+
+form {
+    width: 850px;
+    background-color: whitesmoke;
+}
+
+
+#abbackground {
+    width: 573.33px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0px;
+    top: 23vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 6em "typewriter", sans-serif;
+
+}
+
+img[src^=odin] {
+    width: 80px;
+    height: 105px;
+}
+
+
+.container::after {
+    content: "Photo by Halie West on Unsplash";
+    color: black;
+    font-size: 50px;
+    position: absolute;
+    color: white;
+    font: 16px sans-serif;
+    bottom: 0;
+    left: 0;
+    text-decoration: underline;
+}
+
+form > div {
+    background-color: blue;
+    height: calc(100vh - 66.66%)
+}
+
+div:first-child, 
+div:nth-child(3) {
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+div:nth-child(2) {
+    background-color: white;
+}
+
+
