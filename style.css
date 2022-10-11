@@ -1,50 +1,65 @@
 @font-face {
     font-family: "typewriter";
-    src: url("fonts/Norse-Bold.otf") format("opentype");
+    src: url("fonts/space_age.ttf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
 
 
-
-
 body {
+    margin: 0 auto;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+
+
+
+
+/* body {
     margin: 0 auto;
     max-height: 100vh;
     background-color: black;
     display: flex;
-    justify-content: center;
+
 
 }
+ */
 
 
 
-img {
+/* img:not([src^=odin]) {
+    min-height: 100vh;
     max-height: 100vh;
-    width: 450px;
-    display: block;
-    width: auto;
 }
-
+ */
 
 
 .container {
-    justify-content: center;
+    /* justify-content: center; */
     display: flex;
-    width: 1423.33px;
+    /* width: 1423.33px; */
+    /* width: 74.13%; */
+    /* min-width: 1423.33px; */
     position: relative;
-
+    max-height: 100vh;
+    min-height: 100vh;
 }
 
-form {
-    width: 850px;
-    background-color: whitesmoke;
+
+/* 40.28% */
+
+
+#left-container {
+    width: 29.86%;
 }
+
 
 
 #abbackground {
-    width: 573.33px;
-    height: 150px;
+    /* width: 573.33px; */
+    min-width: 29.86%;
+    max-width: 29.86%;
+    height: 20%;
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     left: 0px;
@@ -54,40 +69,310 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    font: 6em "typewriter", sans-serif;
+    font: 6rem "typewriter", sans-serif;
+
+}
+
+
+
+
+/* img[src^=odin] {
+    
+    width: 5rem;
+    height: 6.56rem;
+    max-width: 35%;
+    max-height: 100%;
+} */
+
+
+
+img:not([src^=transp]) {
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+
+img[src^=transp] {
+    /* width: 80px; */
+    width: 8rem;
+    /* height: 105px; */
+    height: 8rem;
+    max-width: 35%;
+    max-height: 100%;
+}
+
+
+
+
+
+
+
+
+.container::after {
+    content: "Photo by Marek Piwnicki on Unsplash";
+    color: black;
+    position: absolute;
+    color: white;
+    font: 0.85rem sans-serif;
+    bottom: 0;
+    left: 0;
+    text-decoration: underline;
+    /* max-width: 40.28%; */
+
+}
+
+
+div {
+    display: flex;
+}
+
+
+
+
+.right-container div:first-child:not([class^=container-]) {
+/* .right-container div:nth-child(3) */  
+    display: flex; 
+    /* background-color: gold; */
+    /* background-color: rgb(241, 222, 48); */
+    /* background: linear-gradient(to right, #333, #333 50%, #eee 75%); */
+    /* background: linear-gradient(90deg, white 20%, orange 240%); */
+    background:white;
+
+}
+
+
+
+
+
+div:nth-child(2):not(#abbackground):not([class^=container-]) {
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    /* background-color: black; */
+    /* background: linear-gradient(to right, black, teal 100%, #eee 75%); */
+    display: flex;
+}
+
+
+
+
+.right-container {
+    /* width: 850px; */
+    /* width: 59.72%; */
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 100%;
+    /* background: linear-gradient(to right, black, teal 100%, #eee 75%); */
+    /* background: linear-gradient(90deg, black 0%, orange 220%); */
+    /* background: linear-gradient(90deg, black 50%, purple 220%); */
+    /* background-color: black; */
+    background: linear-gradient(180deg, white 90%, teal 120%);
+
+}
+
+/* .right-container > div:first-child {
+    height: calc(100vh - 66.66%);
+
+
+} */
+
+.right-container > #form-container {
+    /* height: calc(100vh - 33.33%); */
+    height: calc(100vh - 33.33%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
 }
 
 img[src^=odin] {
-    width: 80px;
-    height: 105px;
+    display: block;
 }
 
 
-.container::after {
-    content: "Photo by Halie West on Unsplash";
-    color: black;
-    font-size: 50px;
+
+.right-container div:first-child:not([class^=container-]) {
+    /* font-size: 1.9rem; */
+    /* font-size: 2.7vh; */
+    font: 1.3em "typewriter", sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: flex;
+    
+    /* padding-top: 6vh; */
+
+
+}
+
+.right-container div:first-child > p {
+    padding-top: 3vh;
+    padding-left: 3vh;
+}
+
+
+label {
+    /* display: block; */
+    /* text-align: right; */
+    width: 250px;
+    /* font-size: 0.9rem; */
+    font: 0.9rem "typewriter", sans-serif;
+
+
+}
+
+
+#iii {
+    animation: blinker 3s linear infinite;
+    border: 1px solid teal;
+    border-radius: 90px;
+}
+
+
+
+form > div:not(span) {
+    font-size: 1.1rem;
+    color: silver;
+    display: flex;
+    /* width: 350px; */
+    letter-spacing: 0.12rem;
+
+
+}
+
+
+input {
+    /* display: block; */
+    width: 300px;
+    height: 28px;
+    box-sizing: border-box;
+    font-size: 19px;
+    color: rgba(0, 0, 0, 0.8);
+    border: 2.5px solid #5f9ea0;
+    border-radius: 5px;
+    /* background: linear-gradient(90deg, white 5%, purple 180%) */
+    background-color: whitesmoke;    
+    font-weight: 600;
+}
+
+
+span[aria-label=required] {
+    color: silver;
+    position: relative;
+    left: -7px;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+
+.container-one {
+    position: relative;
+}
+
+
+
+fieldset {
     position: absolute;
-    color: white;
-    font: 16px sans-serif;
-    bottom: 0;
-    left: 0;
-    text-decoration: underline;
-}
-
-form > div {
-    background-color: blue;
-    height: calc(100vh - 66.66%)
-}
-
-div:first-child, 
-div:nth-child(3) {
-    background-color: rgba(255, 255, 255, 0.2)
-}
-
-div:nth-child(2) {
-    background-color: white;
+    width: 400px;
+    height: 300px;
+    left: 850px;
+    border: 2.5px solid teal;
+    font: 1.0rem "typewriter", sans-serif;
 }
 
 
+.container-one,
+.container-two,
+.container-three {
+    display: flex;
+    gap: 180px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; 
+    margin-left: 3%;
+}
+
+
+button[type=submit] {
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    font: 1.8rem "typewriter", sans-serif;
+    /* border: 2.5px solid #5f9ea0; */
+
+}
+
+button:hover {
+    color: teal;
+    box-shadow: 1px 1px 1px teal;
+}
+
+#iii,
+label::first-letter {
+    color: teal !important;
+}
+
+label::first-letter {
+    font-size: 1.65rem;
+
+}
+
+
+input:hover,
+input:focus {
+    background-color: #5f9ea0;
+}
+
+
+a {
+    text-decoration: none;
+    color: teal;
+}
+
+
+legend::first-letter {
+    color: black;
+}
+
+
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media only screen and (max-width: 800px) {
+   
+
+     #abbackground {
+         font-size: 21vh;
+     }
+     
+ }
+ 
+ @media only screen and (max-width: 500px) {
+     #abbackground {
+         font-size: 2vh;
+     }
+ } */
