@@ -404,15 +404,6 @@ legend::first-letter {
 }
 
 
-  
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-  }
-
-
-
 .modal-background {
     display: none;
     position: fixed;
@@ -438,19 +429,47 @@ legend::first-letter {
     width: 400px; /* Full width */
     height: 600px; /* Full height */
     /* overflow: auto; */
-    background-color: red;
+    color: white;
+    background-color: black;
+    border: 3px solid teal;
     left: calc(1920px - 60%); 
-    top: calc(860px - 80%)
+    top: calc(860px - 80%);
+    box-shadow: 10px 10px 10px silver;
+    animation-name: slidedown;
+    animation-duration: 3s;
   }
 
 
+  .close {
+    position: absolute;
+    color: teal;
+    /* float: right; */
+    font-weight: bold;
+    right: 0;
+    font: 2rem  sans-serif;
+    border: 2px outset teal;
+    color: silver;
+
+  }
+
+  .close:hover {
+    cursor: pointer;
+
+  }
+
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
 
 
 
-
-
-
-
+@keyframes slidedown {
+    from {top: -300px; opacity: 0}
+    to {top: 20%; opacity: 1}
+}
 
 
 

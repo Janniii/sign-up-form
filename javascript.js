@@ -40,7 +40,7 @@ const modalBack = document.querySelector(".modal-background")
 
 
 modalBack.addEventListener("click", (event) => {
-    if (event.target == modalBack) {
+    if (event.target == modalBack || event.target == closebtn) {
         modal.style.display = "none";
         modalBack.style.display = "none";
     }
@@ -50,6 +50,8 @@ modalBack.addEventListener("click", (event) => {
     modalBack.style.display = "none"; */
 } )
 
+
+const closebtn = document.querySelector(".close");
 
 
 
