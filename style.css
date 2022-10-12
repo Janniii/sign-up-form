@@ -86,7 +86,8 @@ body {
 
 
 
-img:not([src^=transp]) {
+/* img:not([src^=transp]) { */
+img[src^=marek] {
     min-height: 100vh;
     max-height: 100vh;
 }
@@ -102,8 +103,30 @@ img[src^=transp] {
 }
 
 
+ /* .hiddenimg {
+    max-width: 4vh;
+    max-height: 10px;
+ }
+ */
 
+ .modal-container {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 50px;
+    align-items: center;
 
+ }
+
+img[src^=astro] {
+    width: 200px;
+    /* height: 105px; */
+    height: 200px;
+    border-radius: 90px;
+    background-color: white;
+}
 
 
 
@@ -434,7 +457,7 @@ legend::first-letter {
     border: 3px solid teal;
     left: calc(1920px - 60%); 
     top: calc(860px - 80%);
-    box-shadow: 10px 10px 10px silver;
+    box-shadow: 5px 5px 5px silver;
     animation-name: slidedown;
     animation-duration: 3s;
   }
@@ -459,6 +482,22 @@ legend::first-letter {
 
 
 
+  
+/* .hiddendiv {
+
+    animation-name: fufu;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+    
+ */
+
+
+ 
+
+
+
 /* .modal p {
     color: red;
     animation-name: fadein;
@@ -466,21 +505,39 @@ legend::first-letter {
     animation-delay: 4s;
 } */
 
-.modal p > span {
-    color: red;
-    animation-name: fadein;
-    animation-duration: 2.5s;
+
+.temporary {
+    font: 1rem "typewriter", sans-serif;
+    color: teal;
 }
 
 
 
 
 
-p > span:nth-child(1) { animation-delay: .5s }
-p > span:nth-child(2) { animation-delay: 1s }
-p > span:nth-child(3) { animation-delay: 1.5s }
-p > span:nth-child(4) { animation-delay: 2s }
-p > span:nth-child(5) { animation-delay: 2.5s; transform: scale(3.5) }
+
+
+
+
+.modal p > span:not([class=close]) {
+
+    color: teal;
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    font: 1rem "typewriter", sans-serif;
+}
+
+
+
+
+
+p > span:nth-child(1) { animation-delay: 3.5s }
+p > span:nth-child(2) { animation-delay: 4s }
+p > span:nth-child(3) { animation-delay: 4.5s }
+p > span:nth-child(4) { animation-delay: 5s }
+p > span:nth-child(5) { animation-delay: 5.5s; transform: scale(3.5) }
 
 
 
@@ -516,7 +573,7 @@ p > span:nth-child(5) { animation-delay: 2.5s; transform: scale(3.5) }
 
 
 
-  @keyframes blinker {
+@keyframes blinker {
     50% {
       opacity: 0;
     }
@@ -531,9 +588,15 @@ p > span:nth-child(5) { animation-delay: 2.5s; transform: scale(3.5) }
 
 
 
+@keyframes fufu {
+    99% {
+        visibility: hidden;
+    }
 
-
-
+    100% {
+        visibility: visible;
+    }
+}
 
 
 
