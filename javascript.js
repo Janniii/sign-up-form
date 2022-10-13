@@ -13,7 +13,16 @@ let itemListTwo = []
 let itemListThree = []
 
 
+
+
+
+function getFalse() {
+    return false;
+}
+
+
 btn.addEventListener("click", () => {
+    form.reportValidity()
     if (form.checkValidity()) {
         inputs.forEach(input  => {
 
