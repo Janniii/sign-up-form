@@ -5,14 +5,16 @@ const btn = document.querySelector("button");
 const inputs = document.querySelectorAll("input");
 const body = document.querySelector("body");
 const container = document.querySelector(".container")
+const form = document.querySelector("form");
 
 
 let itemList = []
+let itemListTwo = []
+let itemListThree = []
 
 
 btn.addEventListener("click", () => {
-    console.log("hello");
-
+    if (form.checkValidity()) {
         inputs.forEach(input  => {
 
             if (input.type != "radio" && input.type != "checkbox") {
@@ -27,14 +29,14 @@ btn.addEventListener("click", () => {
             else if (input.checked) {
                 console.log(input.value, input.checked)
                 if (input.value != "") {
-                    itemList.push(input.value);
+                    itemListTwo.push(input.value);
                 }
             }
 
         })
 
     createWindow();
-    });
+    }});
 
 
 
@@ -49,6 +51,8 @@ modalBack.addEventListener("click", (event) => {
         modal.style.display = "none";
         modalBack.style.display = "none";
         itemList = [];
+        itemListTwo = [];
+        itemListThree = [];
 
         const oldP = document.querySelectorAll(".temporary");
         console.log(oldP);
@@ -69,9 +73,16 @@ const modalContainer = document.querySelector(".modal-container")
 
 
 function createWindow() {
+    console.log(itemListTwo.length, itemListTwo);
 
     modal.style.display = "block";
     modalBack.style.display = "block";
+
+    itemList[0] = itemList[0] + " " + itemList[1]
+    itemList.splice(1, 1)
+    itemListThree = itemList.concat(itemListTwo)
+ 
+
     
 
     
@@ -79,9 +90,9 @@ function createWindow() {
     windowyo.setAttribute("style", "z-index: 1; display: block; width: 400px; height: 600px; background-color: red; position: absolute; left: calc(1920px - 60%); top: calc(860px - 80%); display: flex; align-self: center;")
     body.appendChild(windowyo); */
 
-    for (let i = 0; i < itemList.length; i++) {
+    for (let i = 0; i < itemListThree.length; i++) {
         const newP = document.createElement("p");
-        newP.textContent = itemList[i];
+        newP.textContent = itemListThree[i];
         newP.classList.add("temporary");
         modalContainer.appendChild(newP);
 
