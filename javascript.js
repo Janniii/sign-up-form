@@ -26,7 +26,7 @@ btn.addEventListener("click", () => {
     if (form.checkValidity()) {
         inputs.forEach(input  => {
 
-            if (input.type != "radio" && input.type != "checkbox") {
+            if (input.type != "radio" && input.type != "checkbox" && input.type != "password") {
                 console.log(input.value)
                 if (input.value != "") {
                     itemList.push(input.value);
@@ -79,6 +79,7 @@ const closebtn = document.querySelector(".close");
 
 const modalContainer = document.querySelector(".modal-container")
 
+const quickDiv = document.querySelector("#quickDiv");
 
 
 function createWindow() {
@@ -102,8 +103,10 @@ function createWindow() {
     for (let i = 0; i < itemListThree.length; i++) {
         const newP = document.createElement("p");
         newP.textContent = itemListThree[i];
+        // newP.classList.add("special");
         newP.classList.add("temporary");
-        modalContainer.appendChild(newP);
+        // modalContainer.appendChild(newP);
+        quickDiv.appendChild(newP);
 
     }
 

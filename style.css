@@ -120,13 +120,22 @@ img[src^=transp] {
 
  }
 
-img[src^=astro] {
+/* img[src^=astro] {
     width: 200px;
-    /* height: 105px; */
     height: 200px;
     border-radius: 90px;
     background-color: white;
 }
+ */
+
+
+ img[src^=astro] {
+    width: 130px;
+    height: 130px;
+    border-radius: 30px;
+    background-color: white;
+}
+
 
 
 
@@ -188,7 +197,7 @@ div:nth-child(2):not(#abbackground):not([class^=container-]) {
     /* background: linear-gradient(90deg, black 0%, orange 220%); */
     /* background: linear-gradient(90deg, black 50%, purple 220%); */
     /* background-color: black; */
-    background: linear-gradient(180deg, white 90%, teal 120%);
+    background: linear-gradient(180deg, black 90%, teal 120%);
     /* background-color: white; */
 
 }
@@ -369,6 +378,16 @@ form {
 }
 
 
+button:not([type=button]) {
+    width: 150px;
+    border-radius: 5px;
+    /* font: 1.8rem "typewriter", sans-serif; */
+    font: 1.3rem "typewriter", sans-serif;
+    position: absolute;
+    bottom: 10px;
+}
+
+
 
 
 
@@ -442,22 +461,23 @@ legend::first-letter {
 
 
 
-
   .modal {
     display: none; /* Hidden by default */
     position: fixed; 
     /* left: 0;
     top: 0; */
+    border-radius: 90px;
     z-index: 1;
     width: 400px; /* Full width */
-    height: 600px; /* Full height */
+    height: 620px; /* Full height */
     /* overflow: auto; */
     color: white;
-    background-color: black;
+    /* background-color: black; */
+    background: linear-gradient(180deg, black 90%, teal 120%);
     border: 3px solid teal;
     left: calc(1920px - 60%); 
     top: calc(860px - 80%);
-    box-shadow: 5px 5px 5px silver;
+    box-shadow: 3px 3px 3px silver;
     animation-name: slidedown;
     animation-duration: 3s;
   }
@@ -468,10 +488,15 @@ legend::first-letter {
     color: teal;
     /* float: right; */
     font-weight: bold;
-    right: 0;
+    /* right: 0; */
+    right: 20px;
+    top: 30px;
     font: 2rem  sans-serif;
     border: 2px outset teal;
     color: silver;
+    border-radius: 90px;
+    width: 40px;
+    text-align: center;
 
   }
 
@@ -494,6 +519,16 @@ legend::first-letter {
  */
 
 
+#quickDiv {
+    display: flex;
+    flex-direction: column;
+    gap: -15px;
+    align-items: center;
+    border: 1px solid silver;
+    border-radius: 15px;
+    background: linear-gradient(180deg, black 90%, teal 120%);
+    padding: 10px;
+}
  
 
 
@@ -507,8 +542,9 @@ legend::first-letter {
 
 
 .temporary {
-    font: 1rem "typewriter", sans-serif;
+    font: 1.06rem "typewriter", sans-serif;
     color: teal;
+    height: 1px;
 }
 
 
@@ -521,7 +557,7 @@ legend::first-letter {
 
 .modal p > span:not([class=close]) {
 
-    color: teal;
+    color: whitesmoke;
     animation-name: fadein;
     animation-duration: 1.5s;
     opacity: 0;
@@ -676,3 +712,10 @@ th:hover {
 td:hover {
     background-color: teal !important;
 }
+
+
+/* p.special::before {
+    content: "Name:        ";
+    position: absolute;
+    left: 0;
+} */
