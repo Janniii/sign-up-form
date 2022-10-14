@@ -15,6 +15,8 @@ let itemListTwo = []
 let itemListThree = []
 
 
+const fpwd = document.getElementById("pwd");
+const spwd = document.getElementById("pwd2");
 
 
 
@@ -25,7 +27,15 @@ function getFalse() {
 
 btn.addEventListener("click", () => {
     form.reportValidity()
-    if (form.checkValidity()) {
+
+
+    if (form.checkValidity() && fpwd.value != spwd.value) {
+        spwd.style.boxShadow = "0 0 4px 2px #DC143C";
+
+    }
+    
+    else if (form.checkValidity() && fpwd.value == spwd.value) {
+        spwd.style.boxShadow = "0 0 4px 2px teal";
         inputs.forEach(input  => {
 
             if (input.type != "radio" && input.type != "checkbox" && input.type != "password") {
