@@ -52,6 +52,8 @@ btn.addEventListener("click", () => {
 const modal = document.querySelector(".modal");
 const modalBack = document.querySelector(".modal-background")
 
+const modalBackTwo = document.querySelector(".modal-backgroundtwo")
+
 
 
 
@@ -82,6 +84,25 @@ const modalContainer = document.querySelector(".modal-container")
 const quickDiv = document.querySelector("#quickDiv");
 
 
+const modalTwo = document.querySelector(".modal-two");
+const btnTable = document.querySelector("#btn-table");
+
+const pTable = document.querySelector("table");
+
+const wow = document.querySelector("#wow");
+
+
+
+
+btnTable.addEventListener("click", createTable);
+
+
+
+
+
+
+
+
 function createWindow() {
     console.log(itemListTwo.length, itemListTwo);
 
@@ -109,6 +130,20 @@ function createWindow() {
         quickDiv.appendChild(newP);
 
     }
+
+}
+
+
+
+function createTable() {
+
+
+    modalBackTwo.style.display = "block";
+    wow.style.display = "flex";
+    pTable.style.display = "block";
+    // pTable.style.transform = "scale(3.5)";
+    /* modalTwo.style.display = "block";
+    modalBack.style.display = "block"; */
 
 }
 

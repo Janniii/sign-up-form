@@ -197,7 +197,7 @@ div:nth-child(2):not(#abbackground):not([class^=container-]) {
     /* background: linear-gradient(90deg, black 0%, orange 220%); */
     /* background: linear-gradient(90deg, black 50%, purple 220%); */
     /* background-color: black; */
-    background: linear-gradient(180deg, black 90%, teal 120%);
+    background: linear-gradient(180deg, white 90%, teal 120%);
     /* background-color: white; */
 
 }
@@ -325,6 +325,11 @@ input[type=checkbox] {
 fieldset label {
     width: 220px;
 }
+
+fieldset {
+    border-radius: 15px;
+}
+
 
 
 .container-2and5 {
@@ -454,7 +459,6 @@ legend::first-letter {
     z-index: 1;
     width: 100%;
     height: 100%;
-    /* overflow: auto; */
     background-color: rgba(0,0,0,0.4);
 }
 
@@ -657,17 +661,57 @@ p > span:nth-child(5) { animation-delay: 5.5s; transform: scale(3.5) }
 
 
 
+ #btn-table {
+    width: 50px;
+    height: 50px;
+}
 
+.modal-two {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    /* left: 0;
+    top: 0; */
+    border-radius: 90px;
+    z-index: 1;
+    width: 400px;
+    height: 620px;
+    /* overflow: auto; */
+    color: white;
+    /* background-color: black; */
+    background: linear-gradient(180deg, black 90%, teal 120%);
+    border: 3px solid teal;
+    left: calc(1920px - 60%); 
+    top: calc(860px - 80%);
+    box-shadow: 3px 3px 3px silver;
+  }
+
+
+
+
+ #wow {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
 
 
 
  table {
+    display: none;
+    z-index: 1;
     border-collapse: collapse;
     /* border: 2px solid rgb(200,200,200); */
     border: 2px solid teal;
     letter-spacing: 1px;
     font-family: sans-serif;
     font-weight: 900;
+    background-color: white;
   }
 
   td, th {
@@ -703,6 +747,7 @@ p > span:nth-child(5) { animation-delay: 5.5s; transform: scale(3.5) }
     padding: 10px;
     font: 1.3rem "typewriter", sans-serif;
     color: teal;
+    background-color: white;
   }
 
 th:hover {
@@ -719,3 +764,17 @@ td:hover {
     position: absolute;
     left: 0;
 } */
+
+
+
+
+.modal-backgroundtwo {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
