@@ -18,6 +18,8 @@ let itemListThree = []
 const fpwd = document.getElementById("pwd");
 const spwd = document.getElementById("pwd2");
 
+const btnConfirm= document.querySelector("#confirm");
+
 
 
 function getFalse() {
@@ -72,7 +74,7 @@ const goBack = document.querySelector("td:first-child");
 
 
 modalBack.addEventListener("click", (event) => {
-    if (event.target == modalBack || event.target == closebtn) {
+    if (event.target == modalBack || event.target == closebtn || event.target == btnConfirm) {
         modal.style.display = "none";
         modalBack.style.display = "none";
         itemList = [];
