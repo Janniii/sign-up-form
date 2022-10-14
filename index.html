@@ -42,7 +42,7 @@
                                             <span aria-label="required">*</span>
                                         </strong>
                                     </span>
-                                    <input type="text" name="first_name" id="fname" placeholder="John" required>
+                                    <input type="text" name="first_name" id="fname" placeholder="John" required pattern="^[aA-zZ]+$" minlength="2" maxlength="10" title="Only letters.">
                             </label>
                             </div>
                             <div class="container-2">
@@ -52,7 +52,7 @@
                                             <span aria-label="required">*</span>
                                         </strong>
                                     </span>
-                                    <input type="text" name="last_name" id="lname" placeholder="Smith" required>
+                                    <input type="text" name="last_name" id="lname" placeholder="Smith" required pattern="^[aA-zZ ]+$" minlength="2" maxlength="10" title="Letters and spaces.">
                             </label>
 
 
@@ -136,12 +136,12 @@
                                             <span aria-label="required">*</span>
                                         </strong>
                                     </span>
-                                    <input type="email" name="user_mail" id="mail" placeholder="example@mail.com" required>
+                                    <input type="email" name="user_mail" id="mail" placeholder="example@mail.com" required minlength="7" maxlength="20">
                                 </label>
                             </div>
                             <div class="container-4">
                                 <label for="tel">Phone Number
-                                    <input type="tel" name="user_phone" id="tel" placeholder="0162 2241852">
+                                    <input type="tel" name="user_phone" id="tel" placeholder="01623241852" pattern="^[0-9]+$" minlength="7" maxlength="14" title="No spaces.">
                                 </label>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                                             <span aria-label="required">*</span>
                                         </strong>
                                     </span>
-                                    <input type="password" name="user_pwd" id="pwd" required>
+                                    <input type="password" name="user_pwd" id="pwd" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*?&]{6,}$" title="Minimum length 6 characters. At least one letter, one number and one special character." placeholder=" ">
                                 </label>
                             </div>
                             <div class="container-6">
@@ -163,7 +163,7 @@
                                             <span aria-label="required">*</span>
                                         </strong>
                                     </span>
-                                    <input type="password" name="user_pwd2" id="pwd2" required>
+                                    <input type="password" name="user_pwd2" id="pwd2" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*?&]{6,}$" title="Minimum length 6 characters. At least one letter, one number and one special character." placeholder=" ">
                                 </label>
                             </div>
                         </div>

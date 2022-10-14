@@ -437,6 +437,7 @@ input:hover,
 input:focus {
     background-color: #5f9ea0;
     border: 1px solid black;
+
 }
 
 
@@ -519,6 +520,23 @@ legend::first-letter {
   }
 
 
+input[type=text]:not(:focus):not(:placeholder-shown):invalid,
+input[type=email]:not(:focus):not(:placeholder-shown):invalid,
+input[type=tel]:not(:focus):not(:placeholder-shown):invalid, 
+input[type=password]:not(:focus):not(:placeholder-shown):invalid {
+ 
+    box-shadow: 0 0 4px 2px #DC143C;
+  }
+
+
+
+input[type=text]:not(:focus):not(:placeholder-shown):valid,
+input[type=email]:not(:focus):not(:placeholder-shown):valid,
+input[type=tel]:not(:focus):not(:placeholder-shown):valid,
+input[type=password]:not(:focus):not(:placeholder-shown):valid {
+    box-shadow: 0 0 4px 2px teal;
+
+}
 
   
 /* .hiddendiv {
