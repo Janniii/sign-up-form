@@ -390,6 +390,7 @@ button:not([type=button]) {
     font: 1.3rem "typewriter", sans-serif;
     position: absolute;
     bottom: 10px;
+
 }
 
 
