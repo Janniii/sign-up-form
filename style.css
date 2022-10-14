@@ -669,10 +669,6 @@ p > span:nth-child(5) { animation-delay: 5.5s; transform: scale(3.5) }
 
 
 
- #btn-table {
-    width: 50px;
-    height: 50px;
-}
 
 .modal-two {
     display: none; /* Hidden by default */
@@ -796,4 +792,29 @@ td:first-child {
 td:first-child:hover {
     cursor: pointer;
     background-color: black !important;
+}
+
+#btn-table,
+#btn-nmode {
+    position: relative;
+    width: 105px;
+    height: 40px;
+    border-radius: 15px;
+    top: 2px;
+    font: 0.75rem "typewriter", sans-serif;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 30%, white 180%);
+    color: white;
+}
+
+
+
+
+
+
+.btn-group {
+    display: flex;
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    gap: 15px;
 }

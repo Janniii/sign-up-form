@@ -7,6 +7,8 @@ const body = document.querySelector("body");
 const container = document.querySelector(".container")
 const form = document.querySelector("form");
 
+const rightContainer = document.querySelector(".right-container");
+
 
 let itemList = []
 let itemListTwo = []
@@ -102,6 +104,30 @@ const btnTable = document.querySelector("#btn-table");
 const pTable = document.querySelector("table");
 
 const wow = document.querySelector("#wow");
+
+const nmode = document.querySelector("#btn-nmode");
+
+
+nmode.addEventListener("click", switchMode);
+
+let nmToggle = 0;
+
+
+function switchMode() {
+
+    if (nmToggle == 0) {
+    rightContainer.style.background = "linear-gradient(180deg, black 90%, teal 120%)";
+    nmToggle = 1;
+    }
+
+    else if (nmToggle == 1) {
+        rightContainer.style.background = "linear-gradient(180deg, white 90%, teal 120%)";
+        nmToggle = 0;
+    }
+
+}
+
+
 
 
 
