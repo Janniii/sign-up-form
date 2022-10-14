@@ -54,6 +54,8 @@ const modalBack = document.querySelector(".modal-background")
 
 const modalBackTwo = document.querySelector(".modal-backgroundtwo")
 
+const goBack = document.querySelector("td:first-child");
+
 
 
 
@@ -74,7 +76,17 @@ modalBack.addEventListener("click", (event) => {
     
     /* modal.style.display = "none";
     modalBack.style.display = "none"; */
-} )
+})
+
+
+
+modalBackTwo.addEventListener("click", (event) => {
+    if (event.target == wow || event.target == goBack) {
+        modalBackTwo.style.display = "none";
+        wow.style.display = "none";
+        pTable.style.display = "none";
+    }
+})
 
 
 const closebtn = document.querySelector(".close");
