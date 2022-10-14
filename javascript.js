@@ -210,42 +210,67 @@ function getPlanet() {
         case "europa":
             star.style.left = "130px"
             star.style.top = "110px"
+            star.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
+            star.style.boxShadow = "7px 2px 10px 1px white";
+            star.style.animation = "star 2s linear infinite";
             break;
 
         case "io":
             star.style.left = "170px"
             star.style.top = "120px"
+            star.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
+            star.style.boxShadow = "7px 2px 10px 1px white";
+            star.style.animation = "star 2s linear infinite";
             break;
 
         case "mars":
             star.style.left = "70px"
             star.style.top = "70px"
+            star.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
+            star.style.boxShadow = "7px 2px 10px 1px white";
+            star.style.animation = "star 2s linear infinite";
             break;
 
         case "mercury":
-            star.style.left = "100px"
-            star.style.top = "100px"
+            star.style.left = "40px"
+            star.style.top = "150px"
+            star.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
+            star.style.boxShadow = "7px 2px 10px 1px white";
+            star.style.animation = "star 2s linear infinite";
             break;
 
         case "moon":
-            star.style.left = "160px"
-            star.style.top = "150px"
+            /* star.style.left = "160px"
+            star.style.top = "150px" */
+            star.style.left = "100px"
+            star.style.top = "100px"
+            star.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
             star.style.boxShadow = "7px 2px 1px -1px white";
             star.style.animation = "moon 2s linear infinite";
+            break;
     
         case "pallas":
             star.style.left = "90px"
             star.style.top = "125px"
+            star.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
+            star.style.boxShadow = "7px 2px 10px 1px white";
+            star.style.animation = "star 2s linear infinite";
             break;
     
         case "venus":
             star.style.left = "82px"
             star.style.top = "67px"
+            star.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
+            star.style.boxShadow = "7px 2px 10px 1px white";
+            star.style.animation = "star 2s linear infinite";
             break;
     
         case "vesta":
             star.style.left = "40px"
             star.style.top = "71px"
+            star.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
+            star.style.boxShadow = "7px 2px 10px 1px white";
+            star.style.animation = "star 2s linear infinite";
             break;
 
             
