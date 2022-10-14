@@ -117,11 +117,13 @@ function switchMode() {
 
     if (nmToggle == 0) {
     rightContainer.style.background = "linear-gradient(180deg, black 90%, teal 120%)";
+    nmode.textContent = "Light Mode";
     nmToggle = 1;
     }
 
     else if (nmToggle == 1) {
         rightContainer.style.background = "linear-gradient(180deg, white 90%, teal 120%)";
+        nmode.textContent = "Night Mode";
         nmToggle = 0;
     }
 
@@ -185,3 +187,74 @@ function createTable() {
 
 }
 
+
+
+
+const radioInputs = document.querySelectorAll("input[type=radio]")
+const star = document.querySelector("#fstar");
+
+
+radioInputs.forEach(input => input.addEventListener("click", getPlanet));
+
+function getPlanet() {
+
+    const element = document.getElementById(this.value);
+    star.style.display = "block";
+    star.style.position = "absolute;"
+
+
+    switch (this.value) {
+
+
+
+        case "europa":
+            star.style.left = "130px"
+            star.style.top = "110px"
+            break;
+
+        case "io":
+            star.style.left = "170px"
+            star.style.top = "120px"
+            break;
+
+        case "mars":
+            star.style.left = "70px"
+            star.style.top = "70px"
+            break;
+
+        case "mercury":
+            star.style.left = "100px"
+            star.style.top = "100px"
+            break;
+
+        case "moon":
+            star.style.left = "160px"
+            star.style.top = "150px"
+            star.style.boxShadow = "7px 2px 1px -1px white";
+            star.style.animation = "moon 2s linear infinite";
+    
+        case "pallas":
+            star.style.left = "90px"
+            star.style.top = "125px"
+            break;
+    
+        case "venus":
+            star.style.left = "82px"
+            star.style.top = "67px"
+            break;
+    
+        case "vesta":
+            star.style.left = "40px"
+            star.style.top = "71px"
+            break;
+
+            
+        
+        
+        
+    }
+
+
+
+
+}
