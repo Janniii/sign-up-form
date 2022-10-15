@@ -13,6 +13,17 @@ body {
 }
 
 
+.container-1 > label,
+.container-2 > label,
+.container-3 > label,
+.container-4 > label,
+.container-5 > label,
+.container-6 > label {
+
+    width: 260px;
+}
+
+
 
 
 /* body {
