@@ -257,8 +257,10 @@ function getPlanet() {
             star.style.left = "100px"
             star.style.top = "100px"
             star.style.backgroundColor = "rgba(0, 0, 0, 0.3)"
-            star.style.boxShadow = "7px 2px 1px -1px white";
-            star.style.animation = "moon 10s linear infinite";
+            star.style.boxShadow = "0px 0px 0px 0px white";
+            // star.style.boxShadow = "7px 2px 1px -1px white";
+            star.style.background = "transparent";
+            star.style.animation = "moon 12s linear infinite";
             break;
     
         case "pallas":
